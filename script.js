@@ -1,25 +1,36 @@
-// CUSTOM CURSOR
+// CUSTOM CURSOR - Optimized
 const cursorDot = document.getElementById('cursorDot');
 const cursorOutline = document.getElementById('cursorOutline');
-let outlineX = 0,
-    outlineY = 0,
-    targetX = 0,
-    targetY = 0;
+let outlineX = 0, outlineY = 0, targetX = 0, targetY = 0;
+let animationFrame; // Tambahkan variabel ini untuk kontrol animasi
+
 if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     window.addEventListener('mousemove', (e) => {
         targetX = e.clientX;
         targetY = e.clientY;
         cursorDot.style.left = e.clientX + 'px';
         cursorDot.style.top = e.clientY + 'px';
+        
+        // Hanya mulai animasi jika belum berjalan
+        if (!animationFrame) {
+            animationFrame = requestAnimationFrame(animateOutline);
+        }
     });
+
     const animateOutline = () => {
         outlineX += (targetX - outlineX) * 0.18;
         outlineY += (targetY - outlineY) * 0.18;
         cursorOutline.style.left = outlineX + 'px';
         cursorOutline.style.top = outlineY + 'px';
-        requestAnimationFrame(animateOutline);
+
+        // Berhenti jika sudah mendekati target untuk hemat baterai
+        if (Math.abs(targetX - outlineX) > 0.1 || Math.abs(targetY - outlineY) > 0.1) {
+            animationFrame = requestAnimationFrame(animateOutline);
+        } else {
+            animationFrame = null;
+        }
     };
-    animateOutline();
+
     document.querySelectorAll('a, button, .faq-item, .portfolio-item').forEach(el => {
         el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovering'));
         el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovering'));
