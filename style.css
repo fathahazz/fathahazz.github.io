@@ -1476,6 +1476,9 @@ h4 {
     color: #ccc;
     border-bottom: 1px solid transparent;
     transition: all 0.2s;
+
+    display: inline-block;
+    padding: 8px 0;
 }
 
 .footer ul li a:hover {
@@ -1681,8 +1684,8 @@ h4 {
     .back-to-top {
         bottom: 18px;
         right: 18px;
-        width: 46px;
-        height: 46px;
+        width: 48px;
+        height: 48px;
     }
 }
 
