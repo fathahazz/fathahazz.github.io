@@ -63,7 +63,7 @@ const updateOffsets = () => {
 };
 
 // Hitung posisi saat halaman dimuat
-updateOffsets();
+requestAnimationFrame(updateOffsets);
 
 const setActiveLink = () => {
     let currentId = null;

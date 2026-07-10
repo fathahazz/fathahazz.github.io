@@ -293,6 +293,7 @@ h4 {
     top: 8%;
     right: 5%;
     font-size: 20rem;
+    font-family: Arial, sans-serif;
     color: #FFD43B;
     opacity: 0.15;
     line-height: 1;
@@ -305,6 +306,7 @@ h4 {
     bottom: 5%;
     left: 3%;
     font-size: 15rem;
+    font-family: Arial, sans-serif;
     color: #FF6B6B;
     opacity: 0.1;
     line-height: 1;
