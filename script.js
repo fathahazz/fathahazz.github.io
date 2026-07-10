@@ -1,7 +1,10 @@
 // CUSTOM CURSOR - Optimized
 const cursorDot = document.getElementById('cursorDot');
 const cursorOutline = document.getElementById('cursorOutline');
-let outlineX = 0, outlineY = 0, targetX = 0, targetY = 0;
+let outlineX = 0,
+    outlineY = 0,
+    targetX = 0,
+    targetY = 0;
 let animationFrame; // Tambahkan variabel ini untuk kontrol animasi
 
 if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -10,7 +13,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
         targetY = e.clientY;
         cursorDot.style.left = e.clientX + 'px';
         cursorDot.style.top = e.clientY + 'px';
-        
+
         // Hanya mulai animasi jika belum berjalan
         if (!animationFrame) {
             animationFrame = requestAnimationFrame(animateOutline);
@@ -46,45 +49,51 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = pct + '%';
 });
 
-// NAVBAR ACTIVE STATE (scroll-spy) - Optimized
+// NAVBAR ACTIVE STATE - Edisi Anti-Reflow
 const navAnchorLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 const spySections = Array.from(navAnchorLinks)
     .map(link => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
 
-// Caching nilai offsetTop agar tidak memicu Forced Reflow
 let sectionsWithOffset = [];
 
+// Fungsi untuk update cache posisi
 const updateOffsets = () => {
     sectionsWithOffset = spySections.map(section => ({
         id: section.id,
-        offset: section.offsetTop // Dihitung sekali di sini saja
+        offset: section.offsetTop,
+        height: section.offsetHeight
     }));
 };
 
-// Hitung posisi saat halaman dimuat
 updateOffsets();
+window.addEventListener('resize', updateOffsets);
 
 const setActiveLink = () => {
-    let currentId = null;
-    const scrollPos = window.scrollY + 120;
-    
-    // Gunakan nilai cache (sectionsWithOffset) bukan lagi section.offsetTop
-    sectionsWithOffset.forEach(section => {
-        if (section.offset <= scrollPos) currentId = section.id;
-    });
+    // Gunakan requestAnimationFrame agar tidak mengganggu jalur kritis browser
+    window.requestAnimationFrame(() => {
+        const scrollPos = window.scrollY + 150; // Jarak aman
+        let currentId = null;
 
-    navAnchorLinks.forEach(link => {
-        const isActive = link.getAttribute('href') === '#' + currentId;
-        link.classList.toggle('active', isActive);
-        // Tambahan untuk aksesibilitas:
-        link.setAttribute('aria-current', isActive ? 'page' : 'false');
+        for (let i = 0; i < sectionsWithOffset.length; i++) {
+            const sec = sectionsWithOffset[i];
+            if (scrollPos >= sec.offset && scrollPos < (sec.offset + sec.height)) {
+                currentId = sec.id;
+            }
+        }
+
+        navAnchorLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            const isActive = href === '#' + currentId;
+            link.classList.toggle('active', isActive);
+            link.setAttribute('aria-current', isActive ? 'page' : 'false');
+        });
     });
 };
 
-// Panggil updateOffsets lagi jika ukuran layar berubah
-window.addEventListener('resize', updateOffsets);
-window.addEventListener('scroll', setActiveLink);
+window.addEventListener('scroll', setActiveLink, {
+    passive: true
+});
 setActiveLink();
 
 // NAVBAR SCROLL
@@ -110,7 +119,9 @@ function closeMenu() {
     navLinks.addEventListener('animationend', function handler() {
         navLinks.classList.remove('closing');
         navLinks.removeEventListener('animationend', handler);
-    }, { once: true });
+    }, {
+        once: true
+    });
 }
 
 hamburger.addEventListener('click', (e) => {
