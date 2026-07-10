@@ -85,7 +85,10 @@ const setActiveLink = () => {
 // Panggil updateOffsets lagi jika ukuran layar berubah
 window.addEventListener('resize', updateOffsets);
 window.addEventListener('scroll', setActiveLink);
-setActiveLink();
+
+// Panggilan pertama ditunda ke frame berikutnya biar gak maksa
+// browser baca window.scrollY di tengah eksekusi script (forced reflow)
+requestAnimationFrame(setActiveLink);
 
 // NAVBAR SCROLL
 window.addEventListener('scroll', () => {
