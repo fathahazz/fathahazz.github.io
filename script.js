@@ -46,22 +46,44 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = pct + '%';
 });
 
-// NAVBAR ACTIVE STATE (scroll-spy)
+// NAVBAR ACTIVE STATE (scroll-spy) - Optimized
 const navAnchorLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 const spySections = Array.from(navAnchorLinks)
     .map(link => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
+
+// Caching nilai offsetTop agar tidak memicu Forced Reflow
+let sectionsWithOffset = [];
+
+const updateOffsets = () => {
+    sectionsWithOffset = spySections.map(section => ({
+        id: section.id,
+        offset: section.offsetTop // Dihitung sekali di sini saja
+    }));
+};
+
+// Hitung posisi saat halaman dimuat
+updateOffsets();
+
 const setActiveLink = () => {
     let currentId = null;
     const scrollPos = window.scrollY + 120;
-    spySections.forEach(section => {
-        if (section.offsetTop <= scrollPos) currentId = section.id;
-
+    
+    // Gunakan nilai cache (sectionsWithOffset) bukan lagi section.offsetTop
+    sectionsWithOffset.forEach(section => {
+        if (section.offset <= scrollPos) currentId = section.id;
     });
+
     navAnchorLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        const isActive = link.getAttribute('href') === '#' + currentId;
+        link.classList.toggle('active', isActive);
+        // Tambahan untuk aksesibilitas:
+        link.setAttribute('aria-current', isActive ? 'page' : 'false');
     });
 };
+
+// Panggil updateOffsets lagi jika ukuran layar berubah
+window.addEventListener('resize', updateOffsets);
 window.addEventListener('scroll', setActiveLink);
 setActiveLink();
 

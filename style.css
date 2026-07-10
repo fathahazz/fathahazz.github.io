@@ -1,3 +1,6 @@
+/* Di dalam CSS kamu */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 /* ===== RESET & BASE ===== */
 *,
 *::before,
@@ -322,7 +325,7 @@ h4 {
     padding: 8px 16px;
     border: 2px solid #1a1a1a;
     background: #FF6B6B;
-    color: #fff;
+    color: #1a1a1a;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
