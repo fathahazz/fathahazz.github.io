@@ -1633,7 +1633,9 @@ h4 {
         transition-delay: 0s !important;
     }
 }
+
 @media (prefers-reduced-motion: reduce) {
+
     .nav-links.open,
     .nav-links.closing {
         animation: none !important;
@@ -1963,7 +1965,7 @@ html {
 
     .wa-float {
         width: 48px;
-        height: 48px;
+        height: 47px;
     }
 
     .wa-tooltip {
@@ -2182,7 +2184,7 @@ html {
         display: flex;
     }
 
-.nav-links.open,
+    .nav-links.open,
     .nav-links.closing {
         display: flex;
         flex-direction: column;
@@ -2289,6 +2291,7 @@ html {
 .avatar-big:hover .avatar-big-img {
     transform: scale(1.18);
 }
+
 /* ===== PORTFOLIO ADDITIONS (personal site) ===== */
 
 /* Hero alias + role */
