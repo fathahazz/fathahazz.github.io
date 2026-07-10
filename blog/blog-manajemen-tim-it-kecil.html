@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahasia Memimpin Tim IT Kecil yang Multi-Disiplin — Fathahazz</title>
+    <meta name="description" content="Berbagi pengalaman sebagai IT Team Lead di Avenixa Labs dalam mengelola divisi Web, Mobile, AI, dan Cyber Security." />
+    <meta name="author" content="Fathahaz Nur Ramdhani" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fathahazz.github.io/blog/blog-manajemen-tim-it-kecil.html" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Rahasia Memimpin Tim IT Kecil yang Multi-Disiplin" />
+    <meta property="og:description" content="Berbagi pengalaman sebagai IT Team Lead di Avenixa Labs dalam mengelola divisi Web, Mobile, AI, dan Cyber Security." />
+    <meta property="og:image" content="../asset/hazz1.webp" />
+    <meta property="og:url" content="https://fathahazz.github.io/blog/blog-manajemen-tim-it-kecil.html" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rahasia Memimpin Tim IT Kecil yang Multi-Disiplin" />
+    <meta name="twitter:description" content="Berbagi pengalaman sebagai IT Team Lead di Avenixa Labs dalam mengelola divisi Web, Mobile, AI, dan Cyber Security." />
+    <meta name="twitter:image" content="../asset/hazz1.webp" />
+
+    <meta name="theme-color" content="#FFD43B" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../asset/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/x-icon" href="../asset/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../asset/favicon/site.webmanifest" />
+</head>
+
+<body>
+    <!-- ===== SVG ICON SPRITE (reusable, natural line icons) ===== -->
+    <svg style="display:none">
+        <symbol id="ic-sparkle" viewBox="0 0 24 24">
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </symbol>
+        <symbol id="ic-bolt" viewBox="0 0 24 24">
+            <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"
+                stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-rocket" viewBox="0 0 24 24">
+            <path d="M12 2c3 1.5 5 5 5 9 0 2-1 4-2 5l-3 3-3-3c-1-1-2-3-2-5 0-4 2-7.5 5-9Z" stroke="currentColor"
+                stroke-width="1.8" stroke-linejoin="round" fill="none" />
+            <circle cx="12" cy="10" r="1.8" stroke="currentColor" stroke-width="1.6" fill="none" />
+            <path d="M8 16c-2 0.5-3 2-3 5 3 0 4.5-1 5-3M16 16c2 0.5 3 2 3 5-3 0-4.5-1-5-3" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-palette" viewBox="0 0 24 24">
+            <path
+                d="M12 3a9 9 0 1 0 0 18c1.2 0 2-1 2-2 0-.6-.3-1-.6-1.4-.3-.4-.6-.8-.6-1.3 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.5-9-7.5Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none" />
+            <circle cx="7.5" cy="10.5" r="1.1" fill="currentColor" />
+            <circle cx="9.5" cy="7" r="1.1" fill="currentColor" />
+            <circle cx="14.5" cy="7" r="1.1" fill="currentColor" />
+        </symbol>
+        <symbol id="ic-plus" viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+        <symbol id="ic-chat" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none" />
+            <path
+                d="M9 8.5c-.3 0-.6.2-.8.5-.4.5-.7 1.1-.7 1.9 0 1.1.6 2.3 1.5 3.2.9 1 2.1 1.8 3.4 2.2.8.3 1.5.3 2-.1.3-.2.6-.5.7-.9l-1.7-.8-.8.8c-1.8-.7-2.9-1.8-3.5-3.5l.8-.8-.9-1.7Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-arrow-up" viewBox="0 0 24 24">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="m4 6.5 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-phone" viewBox="0 0 24 24">
+            <path
+                d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-.9 1.8-1.9 1.6-6-1.2-10.9-6-12.1-12.1-.2-1 .6-1.9 1.6-1.9Z"
+                stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-at" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-4 7.5" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-pin" viewBox="0 0 24 24">
+            <path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"
+                stroke-linejoin="round" fill="none" />
+            <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6" fill="none" />
+        </symbol>
+        <symbol id="ic-cap" viewBox="0 0 24 24">
+            <path d="m12 4 9 4.5-9 4.5-9-4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"
+                fill="none" />
+            <path d="M7 11v4.5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V11" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" fill="none" />
+            <path d="M21 8.5V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="ic-briefcase" viewBox="0 0 24 24">
+            <rect x="3" y="7.5" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5M3 12h18" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-instagram" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+        </symbol>
+        <symbol id="ic-linkedin" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <circle cx="8" cy="8.2" r="1.2" fill="currentColor" />
+            <path d="M8 11.5v6M12.5 17.5v-3.7c0-1.3.9-2.3 2.2-2.3s2.1 1 2.1 2.3v3.7" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-youtube" viewBox="0 0 24 24">
+            <rect x="2.5" y="6" width="19" height="12" rx="3" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M10.5 9.5v5l4.3-2.5Z" fill="currentColor" />
+        </symbol>
+        <symbol id="ic-tiktok" viewBox="0 0 24 24">
+            <path d="M14 3v10.8a2.7 2.7 0 1 1-2.5-2.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                fill="none" />
+            <path d="M14 3c.4 2.4 2.1 4 4.6 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                fill="none" />
+        </symbol>
+        <symbol id="ic-window" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="16" rx="1.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M3 8.5h18" stroke="currentColor" stroke-width="1.7" />
+            <circle cx="6" cy="6.2" r=".6" fill="currentColor" />
+            <circle cx="8" cy="6.2" r=".6" fill="currentColor" />
+        </symbol>
+        <symbol id="ic-mobile" viewBox="0 0 24 24">
+            <rect x="7" y="2.5" width="10" height="19" rx="2" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M11 18.3h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </symbol>
+        <symbol id="ic-target" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <circle cx="12" cy="12" r="4.7" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+        </symbol>
+        <symbol id="ic-chevron-left" viewBox="0 0 24 24">
+            <path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M4.5 20c1.2-4 4-6 7.5-6s6.3 2 7.5 6" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7" fill="none" />
+            <path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-code" viewBox="0 0 24 24">
+            <path d="M8 8 4 12l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+            <path d="m16 8 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+            <path d="m14 5-4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" />
+        </symbol>
+        <symbol id="ic-palette" viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-1 2-2 0-.6-.3-1-.6-1.4-.3-.4-.6-.8-.6-1.3 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.5-9-7.5Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-cloud" viewBox="0 0 24 24">
+            <path d="M7 18h10.5a3.5 3.5 0 0 0 0-7 5.5 5.5 0 0 0-10.6-1.7A4 4 0 0 0 7 18Z" stroke="currentColor"
+                stroke-width="1.7" stroke-linejoin="round" fill="none" />
+        </symbol>
+        <symbol id="ic-github" viewBox="0 0 24 24">
+            <path
+                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                fill="currentColor" />
+        </symbol>
+    </svg>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Fathahazz.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#about">Tentang</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#projects">Proyek</a>
+                <a href="../index.html#experience">Pengalaman</a>
+                <a href="../index.html#education">Edukasi</a>
+                <a href="../index.html#blog" class="active">Blog</a>
+                <a href="../index.html#contact" class="nav-cta">Hubungi Saya</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== ARTICLE HEADER ===== -->
+    <header class="article-hero">
+        <div class="container">
+            <a href="../index.html#blog" class="article-back"><svg class="ic" width="16" height="16"><use href="#ic-chevron-left" /></svg> Kembali ke Blog</a>
+            <span class="neo-tag" style="background:#FFEAA7; color:#1a1a1a;">Leadership</span>
+            <h1 class="article-title">Rahasia Memimpin Tim IT Kecil yang Multi-Disiplin</h1>
+            <div class="article-meta">
+                <span><svg class="ic" width="15" height="15"><use href="#ic-user" /></svg> Fathahaz Nur Ramdhani</span>
+                <span><svg class="ic" width="15" height="15"><use href="#ic-clock" /></svg> 5 menit baca</span>
+                <span><svg class="ic" width="15" height="15"><use href="#ic-briefcase" /></svg> Management · Teamwork</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== ARTICLE CONTENT ===== -->
+    <section class="article-section">
+        <div class="container article-container">
+            <article class="article-content">
+                <p class="lead">Memimpin tim IT yang beranggotakan puluhan orang dengan spesialisasi yang sama memiliki tantangannya tersendiri. Namun, memimpin tim IT yang sangat kecil namun mencakup multi-disiplin—seperti divisi Web Dev, Mobile App, AI, hingga Cyber Security di Avenixa Labs—membutuhkan pendekatan yang sangat unik.</p>
+
+                <h2>Menghubungkan Berbagai Bahasa Teknis</h2>
+                <p>Tantangan terbesar seorang *Team Lead* di tim multi-disiplin adalah komunikasi. Anak Web memikirkan DOM dan REST API, anak Mobile fokus pada *state management* Flutter, anak AI berkutat dengan model *prompt* dan otomasi, sementara tim Cyber Security fokus mencari celah keamanan. Tugas saya adalah menjadi penerjemah arsitektur global agar semua divisi bergerak ke arah yang sama.</p>
+
+                <h2>Alur Kerja yang Kami Terapkan</h2>
+                <p>Agar proyek tidak berantakan, kami menetapkan aturan main yang ketat namun fleksibel:</p>
+                <ul>
+                    <li><strong>Centralized Git Workflows:</strong> Semua kode harus melalui repositori terpusat dengan *branching strategy* yang jelas dan proses *Pull Request* yang di-review bersama.</li>
+                    <li><strong>Documentation First:</strong> Setiap kali tim AI atau Web membuat modul baru, mereka wajib menulis dokumentasi API minimal di file Markdown agar tim Mobile langsung paham cara mengonsumsinya.</li>
+                    <li><strong>Asynchronous Communication:</strong> Mengingat kesibukan masing-masing (termasuk kuliah), kami memaksimalkan Trello dan Discord untuk pelacakan tugas harian tanpa harus sering mengadakan rapat tatap muka.</li>
+                </ul>
+
+                <h2>Empati dan Kebebasan Bereksplorasi</h2>
+                <p>Di tim kecil, kita tidak bisa memperlakukan anggota seperti robot. Saya memberikan kebebasan penuh bagi setiap divisi untuk memilih *tools* mereka sendiri, selama hasil akhirnya dapat terintegrasi dengan baik. Rasa kepemilikan (<em>ownership</em>) inilah yang membuat tim kecil bisa bekerja dengan efisiensi yang sangat tinggi.</p>
+
+                <h2>Kesimpulan</h2>
+                <p>Leadership di dunia IT bukan soal siapa yang paling jago ngoding, melainkan tentang bagaimana menciptakan ekosistem kerja yang transparan, terstruktur, dan saling mendukung antar disiplin ilmu teknologi.</p>
+                <div class="article-cta">
+                    <p>Ada tanggapan atau ingin mendiskusikan topik ini lebih lanjut?</p>
+                    <a href="../index.html#contact" class="neo-btn neo-btn-primary">Hubungi Saya →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="font-size:1.3rem;">Fathahazz.</h4>
+                    <p>Full Stack Developer & UI/UX Enthusiast. Membangun solusi digital dengan pendekatan yang rapi dan terstruktur.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/fathahazz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" width="18" height="18"><use href="#ic-instagram" /></svg></a>
+                        <a href="https://linkedin.com/in/fathahazz" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" width="18" height="18"><use href="#ic-linkedin" /></svg></a>
+                        <a href="https://github.com/hzx-greedy" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic" width="18" height="18"><use href="#ic-github" /></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="../index.html#about">Tentang</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Proyek</a></li>
+                        <li><a href="../index.html#experience">Pengalaman</a></li>
+                        <li><a href="../index.html#education">Edukasi</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="../index.html#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="mailto:fathahazz31@gmail.com">Email</a></li>
+                        <li><a href="https://wa.me/6282110757763" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/fathahazz" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://linkedin.com/in/fathahazz" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Status</h4>
+                    <ul>
+                        <li style="color:#FFD43B;font-weight:700;"><svg class="ic" width="14" height="14" style="vertical-align:-2px;margin-right:4px;"><use href="#ic-sparkle" /></svg>Terbuka untuk kolaborasi</li>
+                        <li><svg class="ic" width="14" height="14" style="vertical-align:-2px;margin-right:4px;"><use href="#ic-briefcase" /></svg>Freelance & magang</li>
+                        <li><svg class="ic" width="14" height="14" style="vertical-align:-2px;margin-right:4px;"><use href="#ic-chat" /></svg>Respons cepat via WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Fathahaz Nur Ramdhani. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT + TOOLTIP ===== -->
+    <div class="wa-wrap">
+        <div class="wa-tooltip" id="waTooltip">
+            Ada yang ingin didiskusikan?
+            <button class="wa-tooltip-close" id="waTooltipClose" aria-label="Tutup"><svg class="ic" width="12" height="12"><use href="#ic-plus" /></svg></button>
+        </div>
+        <a href="https://wa.me/6282110757763" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><svg class="ic" width="26" height="26"><use href="#ic-chat" /></svg></a>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas"><svg class="ic" width="20" height="20"><use href="#ic-arrow-up" /></svg></button>
+
+    <script src="../script.js"></script>
+</body>
+</html>
