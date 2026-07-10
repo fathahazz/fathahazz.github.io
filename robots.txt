@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fathahazz.my.id/sitemap.xml
+Sitemap: https://fathahazz.github.io/sitemap.xml
