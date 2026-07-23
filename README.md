@@ -7,7 +7,7 @@
 Building modern, responsive, and user-friendly websites for businesses and personal brands.
 
 🌐 Portfolio: https://fathahazz.github.io  
-📧 Email: hello@logicbyhazz.com *(ganti kalau sudah punya)*  
+📧 Email:  
 💼 Open for Freelance Projects
 
 </div>
